@@ -35,4 +35,7 @@ body{
   }
 
   /*************/
- 
+  .my-card__media {
+    background-image: url("../img/cup/fifa_cup.png");
+    
+  }
