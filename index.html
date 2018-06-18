@@ -15,34 +15,100 @@
     <script src="libs/jquery/jquery-3.3.1.min.js"></script>
 </head>
 <body class="mdc-typography">
-    <header class="mdc-top-app-bar bg-prirmary-color mdc-toolbar--fixed ">
-        <div class="mdc-top-app-bar__row">
-          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-            <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
-            <span class="mdc-top-app-bar__title">World Cup 2018</span>
-          </section>
-          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-            <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="autorenew" alt="autorenew">autorenew</a>
-            <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Bookmark this page" alt="Bookmark this page">bookmark</a>
-          </section>
-        </div>
-    </header>
+
+    <aside class="mdc-drawer mdc-drawer--temporary mdc-typography">
+        <nav class="mdc-drawer__drawer">
+            <header class="mdc-drawer__header">
+                <div class="mdc-drawer__header-content">
+                    Material design World Cup 2018
+                </div>
+            </header>
+            <nav id="icon-with-text-demo" class="mdc-drawer__content mdc-list">
+                <a class="mdc-list-item mdc-list-item--activated" href="#">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>Inbox
+                </a>
+                <a class="mdc-list-item" href="#tt">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>Star
+                </a>
+            </nav>
+        </nav>
+    </aside>
+    <div class="drawer-header-flex">
+        <header class="mdc-top-app-bar bg-prirmary-color mdc-toolbar--fixed ">
+            <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <button id="id-btn-sidenav_mdc" class="material-icons mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded" style="--mdc-ripple-fg-size:28.8px; --mdc-ripple-fg-scale:1.66667; --mdc-ripple-left:10px; --mdc-ripple-top:10px;">menu</button>
+                <span class="mdc-top-app-bar__title">World Cup 2018</span>
+                <script>
+                    let drawer = new mdc.drawer.MDCTemporaryDrawer(document.querySelector('.mdc-drawer--temporary'));
+                    document.querySelector('#id-btn-sidenav_mdc').addEventListener('click', () => drawer.open = true);
+                </script>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="autorenew" alt="autorenew">autorenew</a>
+                <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Bookmark this page" alt="Bookmark this page">bookmark</a>
+            </section>
+            </div>
+        </header>
+    </div>
+
+
+
+
+
+
+
+
+
+
       
     <main class="container-page mdc-toolbar-fixed-adjust">
 
         
-        <div class="mdc-card">
-                <div class="my-card__media mdc-card__media mdc-card__media--16-9 ">
-                    <div class="mdc-card__media-content"></div>
-                </div>
-                <div class="mdc-card__actions mdc-card__actions--full-bleed">
-                    <a class="mdc-button mdc-card__action mdc-card__action--button" href="#">
-                        Game quiz 
-                        <i class="material-icons" aria-hidden="true">arrow_forward</i>
-                    </a>
-                </div>
+        <div class="mdc-card margin-bottom">
+            <div class="my-card__media mdc-card__media mdc-card__media--16-9 ">
+                <div class="mdc-card__media-content"></div>
+            </div>
+            <div class="mdc-card__actions mdc-card__actions--full-bleed">
+                <a class="mdc-button mdc-card__action mdc-card__action--button" href="#">
+                    Game quiz 
+                    <i class="material-icons" aria-hidden="true">arrow_forward</i>
+                </a>
+            </div>
         </div>
+        <div class="mdc-card margin-bottom">
+            <div class="my-card__media mdc-card__media mdc-card__media--16-9 ">
+                <div class="mdc-card__media-content"></div>
+            </div>
+            <div class="mdc-card__actions mdc-card__actions--full-bleed">
+                <a class="mdc-button mdc-card__action mdc-card__action--button" href="#">
+                    Game quiz 
+                    <i class="material-icons" aria-hidden="true">arrow_forward</i>
+                </a>
+            </div>
+        </div>
+       
 
+
+        <div class="mdc-card margin-bottom">
+                <h3 class="mdc-typography--subtitle1">Leading Icon</h3>
+                <ul class="mdc-list demo-list">
+                    <li class="mdc-list-item mdc-ripple-upgraded">
+                            <span class="mdc-list-item__graphic" aria-hidden="true"><img src="img/logos/Argentina.png" alt=""></span>
+                            <span class="mdc-list-item__text">Argentina</span>
+                        </li>
+                    <li class="mdc-list-item mdc-ripple-upgraded">
+                            <span class="mdc-list-item__graphic" aria-hidden="true"><img src="img/logos/Argentina.png" alt=""></span>
+                            <span class="mdc-list-item__text">Argentina</span>
+                    </li>
+                    <li class="mdc-list-item mdc-ripple-upgraded">
+                            <span class="mdc-list-item__graphic" aria-hidden="true"><img src="img/logos/Argentina.png" alt=""></span>
+                            <span class="mdc-list-item__text">Argentina</span>
+                    </li>
+                </ul>
+            </div>
+
+        
      </main>
      
      <img src="img/logos/Argentina.png" alt="">Argentina <br>

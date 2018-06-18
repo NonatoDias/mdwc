@@ -8,16 +8,41 @@ body{
     background-color: whitesmoke;
 }
 
+
+:root {
+    --mdc-theme-primary:#0b5f91;
+    --mdc-theme-secondary:#018786;
+    --mdc-theme-background:#fff;
+    --mdc-theme-surface:#fff;
+    --mdc-theme-on-primary:#fff;
+    --mdc-theme-on-secondary:#fff;
+    --mdc-theme-on-surface:#000;
+    --mdc-theme-text-primary-on-background:rgba(0,0,0,.87);
+    --mdc-theme-text-secondary-on-background:rgba(0,0,0,.54);
+    --mdc-theme-text-hint-on-background:rgba(0,0,0,.38);
+    --mdc-theme-text-disabled-on-background:rgba(0,0,0,.38);
+    --mdc-theme-text-icon-on-background:rgba(0,0,0,.38);
+    --mdc-theme-text-primary-on-light:rgba(0,0,0,.87);
+    --mdc-theme-text-secondary-on-light:rgba(0,0,0,.54);
+    --mdc-theme-text-hint-on-light:rgba(0,0,0,.38);
+    --mdc-theme-text-disabled-on-light:rgba(0,0,0,.38);
+    --mdc-theme-text-icon-on-light:rgba(0,0,0,.38);
+    --mdc-theme-text-primary-on-dark:#fff;
+    --mdc-theme-text-secondary-on-dark:hsla(0,0%,100%,.7);
+    --mdc-theme-text-hint-on-dark:hsla(0,0%,100%,.5);
+    --mdc-theme-text-disabled-on-dark:hsla(0,0%,100%,.5);
+    --mdc-theme-text-icon-on-dark:hsla(0,0%,100%,.5)
+}
+
+
+
+/****************************/
+
 .container-page{
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
     max-width: 720px;
-}
-
-/***************/
-.bg-prirmary-color{
-    background-color: #0b5f91;
 }
 
 /*************/
@@ -39,3 +64,7 @@ body{
     background-image: url("../img/cup/fifa_cup.png");
     
   }
+
+.mdc-card.margin-bottom{
+    margin-bottom: 10px;
+}
