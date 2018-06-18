@@ -3,6 +3,25 @@
  * @author Nonato Dias
  */
 
+const MDCTextField = mdc.textField.MDCTextField;
+
+
+
+(function(){
+    for (var i = 0, all = document.querySelectorAll('.mdc-text-field'); i< all.length; i++){
+        var tf = new MDCTextField(all[i]);
+    }
+})();
+
+
+(function($){
+    "use strict";
+
+    var search = location.search.substring(1);
+
+
+})(jQuery);
+
 
 
 (function($){

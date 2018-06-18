@@ -68,3 +68,8 @@ body{
 .mdc-card.margin-bottom{
     margin-bottom: 10px;
 }
+
+/******/
+.text-field{
+    width: 100%;
+}
