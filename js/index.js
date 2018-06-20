@@ -125,18 +125,68 @@ var MDCDialog = mdc.dialog.MDCDialog;
                 if(index < max_questions-1){
                     viewCardsQuiz.setQuestion(index+1);
                 }else{
-                    viewCardsQuiz.setQuestion(0);
+                    //viewCardsQuiz.setQuestion(0);
+                    viewResult.render(false);
                 }
             })
         },
 
         render: function(){
             this.setQuestion(0);
+            
+        }
+    }
+
+    var viewResult = {
+        init: function(){
+            this.$el = $('#id-container-questions');
+        },
+
+        render: function(won){
+            if(won == true){
+                this.$el.hide().html(
+                    '<div id="id-card-quiz-1" class="mdc-card margin-bottom padding-content">'+
+                        '<div style="text-align: center; margin-top: 15px;">'+
+                            '<img src="img/win.jpg" alt="" width="240px">'+
+                        '</div>'+
+                        '<h3 class="mdc-typography--headline5" style="text-align: center;">Você Ganhou!</h3>'+
+                        '<div class="mdc-card__actions">'+
+                            '<div class="mdc-card__action-buttons">'+
+                                '<button id="ib-btn-tryagain" class= mdc-button mdc-card__action mdc-card__action--button"><i class="material-icons" style="margin-right: 15px;">'+
+                                'autorenew'+
+                                '</i> TENTAR NOVAMENTE</button>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>'
+                ).fadeIn(400);
+            }else{
+                this.$el.hide().html(
+                    '<div id="id-card-quiz-1" class="mdc-card margin-bottom padding-content">'+
+                        '<div style="text-align: center; margin-top: 15px;">'+
+                            '<img src="img/lose.jpg" alt="" width="200px">'+
+                        '</div>'+
+                        '<h3 class="mdc-typography--headline5" style="text-align: center;">Você Perdeu!</h3>'+
+                        '<div class="mdc-card__actions">'+
+                            '<div class="mdc-card__action-buttons">'+
+                                '<button  id="ib-btn-tryagain" class="mdc-button mdc-card__action mdc-card__action--button"><i class="material-icons" style="margin-right: 15px;">'+
+                                'autorenew'+
+                                '</i> TENTAR NOVAMENTE</button>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>'
+                ).fadeIn(400);
+
+                $('#ib-btn-tryagain').click(function(){
+                    location.reload();
+                })
+            }
         }
     }
 
     var controller = {
         init: function(){
+            
+            viewResult.init();
             viewSelectCountries.init();
             viewCardsQuiz.init();
             viewHelp.init();
