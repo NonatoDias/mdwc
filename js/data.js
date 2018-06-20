@@ -164,5 +164,6 @@ function shuffle(array) {
     return array;
   }
 
-  shuffle(opponents_);
+shuffle(opponents_);
+shuffle(questions_);
 countries_.sort();

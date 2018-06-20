@@ -114,3 +114,12 @@ body{
 .div-item-versus img{
     width: 45px;
 }
+
+/***************/
+.li-right{
+    background: #cbe5cb;
+}
+
+.li-wrong{
+    background: #ffd3d3;
+}

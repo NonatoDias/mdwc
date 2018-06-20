@@ -126,12 +126,21 @@ var MDCDialog = mdc.dialog.MDCDialog;
             '</div>').fadeIn(400);
 
             $('.ask-li-option').click(function(){
+                var $this = $(this);
                 if(index < max_questions-1){
-                    var key = $(this).attr('data-key');
+                    var key = $this.attr('data-key');
                     if(ask.a == key){
-                        viewCardsQuiz.setQuestion(index+1);
+                        $this.addClass('li-right')
+                        setTimeout(function(){
+                            viewCardsQuiz.setQuestion(index+1);
+                        }, 1000);
+                        
                     }else{
-                        viewResult.render(false);
+                        $this.addClass('li-wrong')
+                        setTimeout(function(){
+                            viewResult.render(false);
+                        }, 1000);
+                        
                     }
 
 
