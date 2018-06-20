@@ -39,6 +39,37 @@ var countries_ = [
     'Senegal'
 ]
 
+var opponents_ = [
+    {
+        id: 'russia',
+        text: 'Rússia'
+    },
+    {
+        id: 'japao',
+        text: 'Japão'
+    },
+    {
+        id: 'portugal',
+        text: 'Portugal'
+    },
+    {
+        id: 'uruguai',
+        text: 'Uruguai'
+    },
+    {
+        id: 'franca',
+        text: 'França'
+    },
+    {
+        id: 'alemanha',
+        text: 'Alemanha'
+    },
+    {
+        id: 'inglaterra',
+        text: 'Inglaterra'
+    },
+]
+
 var opt_itens_ = ['a)', 'b)', 'c)', 'd)'];
 var opt_phases_ = [
     'Fase de Grupo - partida 1', 
@@ -114,4 +145,24 @@ var questions_ = [
     }
 ]
 
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+  
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+  
+    return array;
+  }
+
+  shuffle(opponents_);
 countries_.sort();

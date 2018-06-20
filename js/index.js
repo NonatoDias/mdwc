@@ -41,8 +41,9 @@ var MDCDialog = mdc.dialog.MDCDialog;
     var model = {
         user: '',
         countries: countries_,
+        opponents: opponents_,
         questions: questions_,
-        question_index: 0
+        current_question: null
     }
 
 
@@ -65,7 +66,8 @@ var MDCDialog = mdc.dialog.MDCDialog;
             })
 
             $('#id-btn-help').click(function(){
-                dialog.show();dialog.show();
+                dialog.show();
+                $('#my-mdc-dialog-description').html(model.current_question.tipp);
             })
             
         }
@@ -93,7 +95,9 @@ var MDCDialog = mdc.dialog.MDCDialog;
         },
 
         setQuestion: function(index){
-            var ask = model.questions[index];
+            model.current_question = model.questions[index];
+            var ask = model.current_question;
+            var opponent = model.opponents[index];
             var max_questions = 7;//model.questions.length;
             this.$el.hide().html(
             '<div id="id-card-quiz-1" class="card-quiz mdc-card margin-bottom padding-content">'+
@@ -101,19 +105,19 @@ var MDCDialog = mdc.dialog.MDCDialog;
                 '<div class="div-container-versus">'+
                     '<div class="div-item-versus">'+
                         '<img src="img/logos/brasil.png" alt=""> '+
-                        '<span style="display: block;">Brasilyyy</span>'+
+                        '<span style="display: block;">Brasil</span>'+
                     '</div>'+
                     '<span class="span-item-versus">vs</span>'+
                     '<div class="div-item-versus">'+
-                        '<img src="img/logos/colombia.png" alt=""> '+
-                        '<span style="display: block;">Colombia</span>'+
+                        '<img src="img/logos/'+opponent.id+'.png" alt=""> '+
+                        '<span style="display: block;">'+opponent.text+'</span>'+
                     '</div>'+
                 '</div>'+
 
                 '<h3 class="mdc-typography--headline6">'+(index+1+') ') +ask.q+'</h3>'+
                 '<ul class="mdc-list demo-list">'+
                     ask.options.reduce(function(p, c, i){
-                        return p +  '<li class="ask-li-option mdc-list-item mdc-ripple-upgraded">'+
+                        return p +  '<li class="ask-li-option mdc-list-item mdc-ripple-upgraded" data-key="'+i+'">'+
                                         '<span class="mdc-list-item__graphic" aria-hidden="true">'+opt_itens_[i]+'</span>'+
                                         '<span class="mdc-list-item__text">'+c+'</span>'+
                                     '</li>';
@@ -123,10 +127,17 @@ var MDCDialog = mdc.dialog.MDCDialog;
 
             $('.ask-li-option').click(function(){
                 if(index < max_questions-1){
-                    viewCardsQuiz.setQuestion(index+1);
+                    var key = $(this).attr('data-key');
+                    if(ask.a == key){
+                        viewCardsQuiz.setQuestion(index+1);
+                    }else{
+                        viewResult.render(false);
+                    }
+
+
                 }else{
                     //viewCardsQuiz.setQuestion(0);
-                    viewResult.render(false);
+                    viewResult.render(true);
                 }
             })
         },
