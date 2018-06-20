@@ -36,27 +36,42 @@
 
     <main class="conteiner-login">
         <div class="mdc-card margin-auto">
+            <div style=" text-align: center; "> 
+                <img src="img/cup/logo.jpg" alt="" style=" width: 150px; "> 
+                <div>
+                    WORLD CUP QUIZ
+                </div>
+            </div>
             <div class="text-field-container">
                 <div class="mdc-text-field text-field mdc-text-field--upgraded ">
                     <input type="text" id="text-field-login" class="mdc-text-field__input">
-                    <label class="mdc-floating-label" for="text-field-login">Login</label>
+                    <label class="mdc-floating-label" for="text-field-login">Meu usuário</label>
                     <div class="mdc-line-ripple mdc-line-ripple--active mdc-line-ripple--deactivating">
 
                     </div>
                 </div>
             </div>
             <div class="text-field-container">
-                <div class="mdc-text-field text-field mdc-text-field--upgraded ">
-                    <input type="password" id="text-field-password" class="mdc-text-field__input">
-                    <label class="mdc-floating-label" for="text-field-password">Senha</label>
-                    <div class="mdc-line-ripple mdc-line-ripple--active mdc-line-ripple--deactivating">
-
-                    </div>
-                </div>
+                <div class="mdc-select select-field">
+                    <select class="select-countries mdc-select__native-control">
+                      <option value="" disabled selected></option>
+                      <option value="grains">
+                        <img src="img/logos/Argentina.png" alt="">ArgentinaBread, Cereal, Rice, and Pasta
+                      </option>
+                      <option value="vegetables">
+                        Vegetables
+                      </option>
+                      <option value="fruit">
+                        Fruit
+                      </option>
+                    </select>
+                    <label class="mdc-floating-label">Meu país</label>
+                    <div class="mdc-line-ripple"></div>
+                  </div>
             </div>
-            <button class="mdc-button mdc-button--raised" onclick="location.assign('home.html')">
-                <i class="material-icons mdc-button__icon" aria-hidden="true">lock_open</i>
-                    Login
+            <button class="mdc-button mdc-button--raised" style="margin-top: 20px;" onclick="location.assign('home.html')">
+                <i class="material-icons mdc-button__icon" aria-hidden="true">outlined_flag</i>
+                    Iniciar
             </button>
             <div class="mdc-card__actions mdc-card__actions--full-bleed">
                 

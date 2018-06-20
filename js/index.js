@@ -3,14 +3,21 @@
  * @author Nonato Dias
  */
 
-const MDCTextField = mdc.textField.MDCTextField;
-
+var MDCTextField = mdc.textField.MDCTextField;
+var MDCSelect = mdc.select.MDCSelect;
 
 
 (function(){
     for (var i = 0, all = document.querySelectorAll('.mdc-text-field'); i< all.length; i++){
         var tf = new MDCTextField(all[i]);
     }
+    for (var i = 0, all = document.querySelectorAll('.mdc-select'); i< all.length; i++){
+        var tf = new MDCSelect(all[i]);
+    }
+    /*select = );
+    select.listen('change', () => {
+        //alert(`Selected option at index ${select.selectedIndex} with value "${select.value}"`);
+    });*/
 })();
 
 
@@ -27,7 +34,7 @@ const MDCTextField = mdc.textField.MDCTextField;
 (function($){
 
     /* =============  consts ============= */
-    const countries = [
+    var countries_ = [
         'França', 
         'Austrália', 
         'Argentina', 
@@ -62,13 +69,40 @@ const MDCTextField = mdc.textField.MDCTextField;
         'Senegal'
     ]
 
+    countries_.sort();
 
     /* =============  model ============= */
 
-    let model = {
-        user: ''
+    var model = {
+        user: '',
+        countries: countries_
     }
 
 
+    /* ============ views ================ */ 
+
+    var viewSelectCountries = {
+        init: function(){
+            var $select =  $('.select-countries');
+            $select.html('<option value="" disabled selected></option>');
+            model.countries.forEach(function(c){
+                $select.append('<option value="vegetables">'+c+'</option>');
+            });
+            
+        },
+
+        render: function(){
+
+        }
+    }
+
+
+    var controller = {
+        init: function(){
+            viewSelectCountries.init();
+        }
+    }
+
+    controller.init();
 
 })(jQuery);
