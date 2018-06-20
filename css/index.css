@@ -69,6 +69,11 @@ body{
     padding: 10px 30px;
   }
 
+  .mdc-card.padding-content-less{
+    padding: 10px 10px;
+  }
+
+
 .mdc-card.margin-bottom{
     margin-bottom: 10px;
 }
