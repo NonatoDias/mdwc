@@ -51,7 +51,7 @@ var opt_phases_ = [
 ];
 var questions_ = [
     {
-        q: 'Em que ano foi realizada a primeira copa do mundo em?',
+        q: 'Em que ano foi realizada a primeira copa do mundo?',
         a: 2,
         options:['1934', '1935', '1930', '1895']
     },
@@ -67,11 +67,41 @@ var questions_ = [
     }
     ,
     {
-        q: 'Em quais anos a Argentina foi campã do Mundo?',
+        q: 'Quem foi o artilheiro da copa do mundo em 2016 e com quantos gols?',
+        a: 1,
+        options:['Alemão Klose (5 gols)', 'Italiano Totti ( 6 gols)', 'Francês Zidane (5 gols) ', ' Brasileiro Kaká (5 gols)']
+    },
+    {
+        q: 'Em quais anos a Argentina foi campeã do Mundo?',
         a: 3,
         options:['1990 e 1994', '1978 e 1986', ' 1970 e 1990', '1979 e 1996']
-    }
-    ,
+    },
+     {
+        q: 'Qual é a seleção classificada para a copa do Mundo 2018 com pior colocação no ranking da Fifa?',
+        a: 4,
+        options:['Rússia', 'Coréia do Sul', 'Panamá', 'Arábia Saudita']
+    },
+    {
+        q: 'Qual o adversário o Brasil enfrentou mais vezes em copas?',
+        a: 4,
+        options:['Holanda', 'México', 'França', 'Suécia']
+    },
+    {
+        q: 'Fora as estreantes, qual é a seleção que há mais tempo não se classificava para uma copa do Mundo?',
+        a: 2,
+        options:['Alemanha x Suécia', 'Argentina x Nigéria', 'Brasil x Costa Rica', 'França x Dinamarca']
+    },
+
+     {
+        q: 'Contabilizando 2018, qual é o confronto mais repetido em primeiras fases?',
+        a: 1,
+        options:['Peru', 'Sérvia', 'Marrocos', 'Egito']
+    },
+    {
+        q: 'Qual jogador marcou mais gols pelo Brasil?',
+        a: 1,
+        options:['Pelé', 'Neymar', 'Romário', 'Ronaldo']
+    },
     {
         q: '',
         a: 3,
