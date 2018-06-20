@@ -49,6 +49,10 @@ var MDCDialog = mdc.dialog.MDCDialog;
 
     var viewHelp = {
         init: function(){
+            var $el = document.querySelector('#my-mdc-dialog');
+            if(!$el) return null;
+
+            
             var dialog = new MDCDialog(document.querySelector('#my-mdc-dialog'));
 
             dialog.listen('MDCDialog:accept', function() {
