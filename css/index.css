@@ -60,6 +60,12 @@ body{
   }
 
   /*************/
+  @media(max-height: 740px) {
+        .card-quiz{
+            min-height: calc(100vh - 75px);
+        }
+    }
+
   .my-card__media {
     background-image: url("../img/cup/fifa_cup.png");
     

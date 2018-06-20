@@ -41,7 +41,8 @@ var MDCDialog = mdc.dialog.MDCDialog;
     var model = {
         user: '',
         countries: countries_,
-        questions: questions_
+        questions: questions_,
+        question_index: 0
     }
 
 
@@ -52,7 +53,7 @@ var MDCDialog = mdc.dialog.MDCDialog;
             var $el = document.querySelector('#my-mdc-dialog');
             if(!$el) return null;
 
-            
+
             var dialog = new MDCDialog(document.querySelector('#my-mdc-dialog'));
 
             dialog.listen('MDCDialog:accept', function() {
@@ -93,9 +94,9 @@ var MDCDialog = mdc.dialog.MDCDialog;
 
         setQuestion: function(index){
             var ask = model.questions[index];
-            var max_questions = model.questions.length;
+            var max_questions = 7;//model.questions.length;
             this.$el.hide().html(
-            '<div id="id-card-quiz-1" class="mdc-card margin-bottom padding-content">'+
+            '<div id="id-card-quiz-1" class="card-quiz mdc-card margin-bottom padding-content">'+
                 '<h3 class="mdc-typography--headline6" style="text-align: center;">'+opt_phases_[index]+'</h3>'+
                 '<div class="div-container-versus">'+
                     '<div class="div-item-versus">'+
@@ -121,10 +122,10 @@ var MDCDialog = mdc.dialog.MDCDialog;
             '</div>').fadeIn(400);
 
             $('.ask-li-option').click(function(){
-                if(index < max_questions){
+                if(index < max_questions-1){
                     viewCardsQuiz.setQuestion(index+1);
                 }else{
-                    index = 0;
+                    viewCardsQuiz.setQuestion(0);
                 }
             })
         },

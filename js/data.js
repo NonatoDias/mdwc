@@ -101,22 +101,6 @@ var questions_ = [
         q: 'Qual jogador marcou mais gols pelo Brasil?',
         a: 1,
         options:['Pelé', 'Neymar', 'Romário', 'Ronaldo']
-    },
-    {
-        q: '',
-        a: 3,
-        options:['', '', '', '']
-    }
-    ,
-    {
-        q: '',
-        a: 3,
-        options:['', '', '', '']
-    },
-    {
-        q: '',
-        a: 3,
-        options:['', '', '', '']
     }
 ]
 
