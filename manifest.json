@@ -2,7 +2,18 @@
     "short_name": "MDWC",
     "name": "World cup",
     "theme_color": "#0b5f91",
-    
+    "icons": [
+      {
+          "src": "img/icon-2.png",
+          "sizes": "192x192",
+          "type": "image/png"
+      },
+      {
+          "src": "img/icon-2.png",
+          "sizes": "512x512",
+          "type": "image/png"
+      }
+  ],
     "start_url": "index.html",
     "display": "standalone",
     "lang": "pt-BR"
