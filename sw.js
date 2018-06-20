@@ -5,13 +5,13 @@
  */
 
 
-var CACHE_VERSION = 1;
+var CACHE_VERSION = 2;
 var CACHE_NAME = 'mdwc-static-v'+CACHE_VERSION;
 var OFFLINE_URL = '';
 
 //dsd
 var urlsToCache = [
-    'libs/jquery/jquery-3.2.1.min.js'
+    'https://nonatodias.github.io/mdwc/libs/jquery/jquery-3.3.1.min.js'
 ]
 
 self.addEventListener('install', function(event) {
